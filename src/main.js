@@ -11,7 +11,7 @@ Vue.config.productionTip = false;
 
 const router = new VueRouter({
   routes : [
-    {path: '/', redirect: '/accueil'},
+    {path: '/', redirect: '/me'},
     {path: '/me', component: MeInfo},
     {path: '/project', component: Projects},
     {path: '/parcours', component: Parcours}
