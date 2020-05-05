@@ -3,7 +3,7 @@ node_js:
 - stable
 deploy:
   provider: heroku
-  app: projet-catho-front
+  app: tony-landschoot
   api_key: $HEROKU_TOKEN
 cache:
   directories:
