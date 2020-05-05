@@ -70,7 +70,34 @@
             dialog: false,
             persos: [
                 {
-                    flex: 3,
+                    flex: 4,
+                    src: require('../assets/projects/perso/catho/pic3.png'),
+                    dialog: false,
+                    title: 'Durée annualisée',
+                    link: 'https://projet-catho-front.herokuapp.com/',
+                    description: 'Ce projet est destiné à aider les employés de l\'université catholique de Lille à calculer la durée annualisé pour leurs' +
+                        'employés. Avec ce projet j\'ai pu approfondir mes compétences en front avec vuejs mais également coté back avec spring. J\'ai également' +
+                        'appris comment gérer l\'authentification avec spring security et jwt token. Il suffit de rentrer l\'année pour laquelle on veut calculer la' +
+                        'durée annualisé, la date d\'entrée de l\'employé, et le logiciel calcul automatiquement ces jours de congés qu\'il à accumuler, le nombre de RTT' +
+                        'le nombre de week end et de jour férie pendant cette période, et sort le nombre d\'heure ou de jours à réaliser dans l\'année.',
+                    car: [
+                        require('../assets/projects/perso/catho/banner-card.png'),
+                        require('../assets/projects/perso/catho/pic1.png'),
+                        require('../assets/projects/perso/catho/pic2.png'),
+                        require('../assets/projects/perso/catho/pic3.png'),
+                        require('../assets/projects/perso/catho/pic4.png')
+                    ],
+                    technos: [
+                        'vuejs',
+                        'vuetify',
+                        'spring',
+                        'spring-security',
+                        'travis',
+                        'heroku'
+                    ]
+                },
+                {
+                    flex: 4,
                     src: require('../assets/projects/perso/spotif/banner-card.png'),
                     dialog: false,
                     title: 'Spotif',
@@ -91,7 +118,7 @@
                     ]
                 },
                 {
-                    flex: 3,
+                    flex: 4,
                     src: require('../assets/projects/perso/area-citizen/banner-card.png'),
                     title: 'Area Citizen',
                     dialog: false,
