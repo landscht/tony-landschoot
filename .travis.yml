@@ -1,0 +1,12 @@
+nguage: node_js
+node_js:
+- stable
+deploy:
+  provider: heroku
+  app: projet-catho-front
+  api_key: $HEROKU_TOKEN
+cache:
+  directories:
+  - node_modules
+script:
+- npm run build
