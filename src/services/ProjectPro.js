@@ -23,6 +23,7 @@ export default {
                 'vuejs', 'vuetify', 'npm', 'nodejs', 'neo4j', 'docker', 'travis', 'java', 'spring'
             ],
             rapport: 'https://docs.google.com/document/d/1h_biHB0iMrt2ddAJ6LTSZ1JUmPdPbwTQDFpbbtGp92E/edit?usp=sharing'
-        })
+        }),
+
     ]
 }

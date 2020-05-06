@@ -35,6 +35,7 @@ export default {
             dialog: false,
             title: 'Spotif',
             link: 'https://spotifhue.herokuapp.com',
+            github: 'https://github.com/landscht/spotif-hue',
             description: 'L\'idée première de ce projet était de me perfectionné avec vuejs et également de manipuler des APIs. J\'ai donc' +
                 'recréé une interface pour Spotify en utilisant leur API et leur player SDK. Spotif récupére les playlists et musiques enregistré' +
                 'par l\'utilisateur Spotify et de les écouter. On peut également obtenir des informations sur les musiques en cours d\'écoutes. Je vous laisse' +
@@ -54,6 +55,8 @@ export default {
             flex: 6,
             src: require('../assets/projects/perso/area-citizen/banner-card.png'),
             title: 'Area Citizen',
+            link: 'http://area-citizen.herokuapp.com/',
+            github: 'https://github.com/landscht/area-citizen',
             dialog: false,
             description: 'Area Citizen est un site web qui regroupe les vaisseaux présents dans le jeu Star Citizen. Il est possible de voir toute les caractéristiques' +
                 'd\'un vaisseau et de voir de quoi il est composé. Une fonction permet de comparer autant de vaisseau qu\'on désire. Toutes les informations des vaisseaux' +
