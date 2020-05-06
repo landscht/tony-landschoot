@@ -4,6 +4,7 @@
       app
       elevate-on-scroll
       fade-img-on-scroll
+      shrink-on-scroll
       dark
       src="./assets/toolbar/banner-toolbar.jpeg"
     >
@@ -36,7 +37,9 @@
     </v-app-bar>
 
     <v-content>
-      <router-view id="content"></router-view>
+      <Accueil></Accueil>
+      <Parcours></Parcours>
+      <Projects></Projects>
     </v-content>
     <v-footer
             dark
@@ -66,9 +69,12 @@
 
 <script>
 
+import Accueil from "./pages/me-info";
+import Parcours from "./pages/Parcours";
+import Projects from "./pages/Projects";
 export default {
   name: 'App',
-
+  components: {Projects, Parcours, Accueil},
   data: () => ({
     //
   }),
