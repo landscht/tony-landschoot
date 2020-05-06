@@ -1,12 +1,12 @@
 <template>
     <div class="text-center">
         <v-container style="text-align: left">
-            <span class="headline">Parcour scolaire</span>
+            <v-card-title>Parcour scolaire</v-card-title>
             <v-timeline>
                 <v-timeline-item
                         v-for="(etape, n) in scolaires"
                         :key="n"
-                        color="primary"
+                        color="#009688"
                         fill-dot
                         left
                 >
@@ -14,7 +14,7 @@
                         {{etape.date}}
                     </template>
                     <v-card class="elevation-2">
-                        <v-card-title class="headline">{{etape.title}}</v-card-title>
+                        <v-card-title>{{etape.title}}</v-card-title>
                         <v-card-text>
                             <v-icon>mdi-school</v-icon> {{etape.ecole}}<br>
                             <v-icon>mdi-map-marker</v-icon> {{etape.ville}}<br>
@@ -24,35 +24,37 @@
                 </v-timeline-item>
             </v-timeline>
         </v-container>
-        <div style="background-color: #009688">
-            <v-container style="text-align: left;">
-                <span class="headline white--text">Parcour professionnel</span>
-                <v-timeline>
-                    <v-timeline-item
-                            v-for="(etape, n) in pro"
-                            :key="n"
-                            color="secondary"
-                            fill-dot
-                            right
-                    >
-                        <template v-slot:opposite>
-                            <span class="white--text">{{etape.date}}</span>
-                        </template>
-                        <v-card class="elevation-2">
-                            <v-card-title class="headline">
-                                {{etape.company}}
-                            </v-card-title>
-                            <v-card-text>
-                                <v-icon>mdi-briefcase</v-icon> {{etape.poste}}<br>
-                                <v-icon>mdi-map-marker</v-icon> {{etape.ville}}<br>
-                                {{etape.description}}
-                            </v-card-text>
-                        </v-card>
-                    </v-timeline-item>
-                </v-timeline>
-            </v-container>
+        <v-container style="text-align: left;">
+            <v-card color="#009688" class="elevation-10">
+                <v-card-title class="white--text">Parcour professionnel</v-card-title>
+                <v-card-text>
+                    <v-timeline>
+                        <v-timeline-item
+                                v-for="(etape, n) in pro"
+                                :key="n"
+                                color="secondary"
+                                fill-dot
+                                right
+                        >
+                            <template v-slot:opposite>
+                                <span class="white--text">{{etape.date}}</span>
+                            </template>
+                            <v-card class="elevation-2">
+                                <v-card-title class="headline">
+                                    {{etape.company}}
+                                </v-card-title>
+                                <v-card-text>
+                                    <v-icon>mdi-briefcase</v-icon> {{etape.poste}}<br>
+                                    <v-icon>mdi-map-marker</v-icon> {{etape.ville}}<br>
+                                    {{etape.description}}
+                                </v-card-text>
+                            </v-card>
+                        </v-timeline-item>
+                    </v-timeline>
+                </v-card-text>
+            </v-card>
+        </v-container>
         </div>
-    </div>
 </template>
 
 <script>
@@ -115,7 +117,3 @@
         })
     }
 </script>
-
-<style scoped>
-
-</style>

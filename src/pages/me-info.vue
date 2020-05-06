@@ -1,5 +1,5 @@
 <template>
-    <div class="text-center mt-5">
+    <div class="text-center mt-5" id="content-me">
         <v-avatar size="150">
             <v-img src="../assets/me/profile.jpg"></v-img>
         </v-avatar>

@@ -1,15 +1,16 @@
 <template>
-  <v-app>
+  <v-app id="app">
     <v-app-bar
       app
+      elevate-on-scroll
+      fade-img-on-scroll
       dark
       src="./assets/toolbar/banner-toolbar.jpeg"
     >
       <template v-slot:img="{ props }">
         <v-img
                 v-bind="props"
-
-                gradient="to top right, rgba(0,0,0,.30), rgba(0,0,0,.30)"
+                gradient="to top right, rgba(0,0,0,.40), rgba(0,0,0,.40)"
         ></v-img>
       </template>
       <v-toolbar-title>Tony Landschoot</v-toolbar-title>
