@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-container style="text-align: left">
-            <span class="display-3">Projets personnels</span>
+            <span class="headline">Projets personnels</span>
             <v-row dense>
                 <v-col
                         v-for="(perso ,n) in persos"
@@ -39,15 +39,15 @@
                                 <span class="headline">{{perso.title}}</span>
                             </v-card-title>
                             <v-card-text>
-                                {{perso.description}}
-                            </v-card-text>
-                            <v-card-actions>
+                                <p>{{perso.description}}</p>
                                 <v-chip
                                         v-for="(techno, n) in perso.technos"
-                                        class="ml-2"
+                                        class="ml-2 mb-1"
                                         :key="n">
                                     {{techno}}
                                 </v-chip>
+                            </v-card-text>
+                            <v-card-actions>
                                 <v-spacer></v-spacer>
                                 <v-btn icon><v-icon>mdi-github</v-icon></v-btn>
                                 <v-btn icon v-if="perso.link" :href="perso.link"><v-icon>mdi-eye</v-icon></v-btn>
@@ -58,7 +58,7 @@
             </v-row>
         </v-container>
         <v-container style="text-align: left">
-            <span class="display-3">Projets scolaires</span>
+            <span class="headline">Projets scolaires</span>
         </v-container>
     </div>
 </template>
@@ -70,7 +70,7 @@
             dialog: false,
             persos: [
                 {
-                    flex: 4,
+                    flex: 6,
                     src: require('../assets/projects/perso/catho/pic3.png'),
                     dialog: false,
                     title: 'Durée annualisée',
@@ -97,7 +97,7 @@
                     ]
                 },
                 {
-                    flex: 4,
+                    flex: 6,
                     src: require('../assets/projects/perso/spotif/banner-card.png'),
                     dialog: false,
                     title: 'Spotif',
@@ -118,7 +118,7 @@
                     ]
                 },
                 {
-                    flex: 4,
+                    flex: 12,
                     src: require('../assets/projects/perso/area-citizen/banner-card.png'),
                     title: 'Area Citizen',
                     dialog: false,

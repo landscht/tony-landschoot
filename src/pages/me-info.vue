@@ -8,7 +8,7 @@
             <v-icon>mdi-cake-variant</v-icon> 21 ans<br>
         </p>
         <v-container style="text-align: left">
-            <span class="display-3">Description</span>
+            <span class="headline">Description</span>
             <p class="text-justify">Moi c'est Tony, je suis actuellement étudiant en <b>licence MIAGE</b> à Lille! J'ai commencé la programmation au lycée à l'aide de tuto
                 trouvé sur youtube. L'envie de continuer dans cette voie c'est concrétisé en Terminale grâce à l'option <b>ISN (Informatique et Science du Numérique)</b>
                 que j'ai pris au bac. Depuis je suis titulaire d'un <b>DUT informatique</b> réalisé à Lille et d'une <b>licence MIAGE</b>. Je compte continuer mon parcours en
