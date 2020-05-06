@@ -16,19 +16,19 @@
                     <v-card class="elevation-2">
                         <v-card-title>{{etape.title}}</v-card-title>
                         <v-card-text>
-                            <v-icon>mdi-school</v-icon> {{etape.ecole}}<br>
-                            <v-icon>mdi-map-marker</v-icon> {{etape.ville}}<br>
+                            <v-icon color="#009688">mdi-school</v-icon> {{etape.ecole}}<br>
+                            <v-icon color="#009688">mdi-map-marker</v-icon> {{etape.ville}}<br>
                             {{etape.description}}
                         </v-card-text>
                     </v-card>
                 </v-timeline-item>
             </v-timeline>
         </v-container>
-        <v-container style="text-align: left;">
+        <v-container>
             <v-card color="#009688" class="elevation-10">
                 <v-card-title class="white--text">Parcour professionnel</v-card-title>
                 <v-card-text>
-                    <v-timeline>
+                    <v-timeline style="z-index: 1">
                         <v-timeline-item
                                 v-for="(etape, n) in pro"
                                 :key="n"
@@ -44,8 +44,8 @@
                                     {{etape.company}}
                                 </v-card-title>
                                 <v-card-text>
-                                    <v-icon>mdi-briefcase</v-icon> {{etape.poste}}<br>
-                                    <v-icon>mdi-map-marker</v-icon> {{etape.ville}}<br>
+                                    <v-icon color="#009688">mdi-briefcase</v-icon> {{etape.poste}}<br>
+                                    <v-icon color="#009688">mdi-map-marker</v-icon> {{etape.ville}}<br>
                                     {{etape.description}}
                                 </v-card-text>
                             </v-card>

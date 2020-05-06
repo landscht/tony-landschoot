@@ -7,9 +7,9 @@
                     :key="n"
                     :cols="card.flex"
             >
-                <v-dialog v-model="card.dialog" max-width="1000px">
-                    <template v-slot:activator="{ on }">
-                        <v-card v-on="on">
+                <v-hover>
+                    <template v-slot:default="{ hover }">
+                        <v-card @click="card.dialog = !card.dialog" class="mt-1 ml-1 mb-1 mr-1">
                             <v-img
                                     :src="card.src"
                                     class="white--text align-end"
@@ -18,9 +18,22 @@
                             >
                                 <v-card-title v-text="card.title"></v-card-title>
                             </v-img>
+                            <v-fade-transition>
+                                <v-overlay
+                                        v-if="hover"
+                                        absolute
+                                        color="#009688"
+                                        z-index="1"
+                                >
+                                    <v-btn>Voir plus d'infos</v-btn>
+                                </v-overlay>
+                            </v-fade-transition>
                         </v-card>
                     </template>
-                    <v-card>
+                </v-hover>
+                <v-dialog v-model="card.dialog" max-width="1000px">
+
+                <v-card>
                         <v-carousel
                                 style="text-align: right"
                                 cycle

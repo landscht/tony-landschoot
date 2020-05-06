@@ -1,8 +1,6 @@
 <template>
     <div>
-        <LibraryCard title="Projets personnels" :data="persos"></LibraryCard>
-        <LibraryCard title="Projets professionnels" :data="pros"></LibraryCard>
-        <LibraryCard title="Projets scolaires" :data="scolaires"></LibraryCard>
+        <LibraryCard title="Projets personnels" :data="projects"></LibraryCard>
     </div>
 </template>
 
@@ -17,9 +15,7 @@
         components: {LibraryCard},
         data: () => ({
             dialog: false,
-            persos: ProjectPerso.persos,
-            pros: ProjectPro.pros,
-            scolaires: ProjectScolaire.scolaires
+            projects: ProjectPerso.persos.concat(ProjectPro.pros).concat(ProjectScolaire.scolaires),
         })
     }
 </script>

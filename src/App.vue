@@ -1,12 +1,11 @@
 <template>
   <v-app id="app">
     <v-app-bar
-      app
+      fixed
+      style="z-index: 100"
       elevate-on-scroll
-      fade-img-on-scroll
-      shrink-on-scroll
-      dark
-      src="./assets/toolbar/banner-toolbar.jpeg"
+      :color="scrollPosY < 50 ? 'transparent' : ''"
+      :dark="scrollPosY > 50"
     >
       <template v-slot:img="{ props }">
         <v-img
@@ -28,7 +27,7 @@
         <v-icon>mdi-download</v-icon>
       </v-btn>
       <template v-slot:extension>
-        <v-tabs align-with-title>
+        <v-tabs align-with-title color="seconcary">
           <v-tab to="/me">Qui suis-je</v-tab>
           <v-tab to="/parcours">Parcours</v-tab>
           <v-tab to="/project">Projets</v-tab>
@@ -36,10 +35,10 @@
       </template>
     </v-app-bar>
 
-    <v-content>
-      <Accueil></Accueil>
-      <Parcours></Parcours>
-      <Projects></Projects>
+    <v-content v-scroll="onScro">
+      <Accueil class="mb-5"></Accueil>
+      <Parcours class="mb-5"></Parcours>
+      <Projects class="mb-5"></Projects>
     </v-content>
     <v-footer
             dark
@@ -75,8 +74,17 @@ import Projects from "./pages/Projects";
 export default {
   name: 'App',
   components: {Projects, Parcours, Accueil},
+  methods : {
+    onScro() {
+      console.log(window.scrollY);
+      this.scrollPosY = window.scrollY;
+    }
+  },
   data: () => ({
-    //
+    scrollPosY: 0
   }),
 };
 </script>
+<style scoped>
+
+</style>

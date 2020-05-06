@@ -29,6 +29,22 @@ export default {
             technos: [
                 'java'
             ],
+        }),
+        Object.assign(new Project(), {
+            flex: 4,
+            src: require('../assets/projects/scolaire/modelisation/banner.png'),
+            dialog: false,
+            title: 'Rendu modélisation 3D',
+            link: 'https://drive.google.com/file/d/1Vdujq1MLokpUIqj7BDu8zZVBQMf433mx/view?usp=sharing',
+            description: 'Ce projet réalisé au semestre 3 du DUT permet à partir d\'un fichier PLY, d\'afficher les arretes et les faces du fichier pour le' +
+                'modéliser',
+            car: [
+                require('../assets/projects/scolaire/modelisation/banner.png'),
+                require('../assets/projects/scolaire/modelisation/pic1.png'),
+            ],
+            technos: [
+                'java'
+            ],
         })
     ]
 }
